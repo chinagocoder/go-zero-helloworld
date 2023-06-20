@@ -1,0 +1,13 @@
+type (
+	IndexReq {
+	}
+
+	IndexResp {
+		Data string `json:"data"`
+	}
+)
+
+service main {
+	@handler Index
+	get /index (IndexReq) returns (IndexResp)
+}
